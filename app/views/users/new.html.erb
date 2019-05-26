@@ -1,0 +1,16 @@
+<h1>Total Rickall</h1>
+
+Sign up with your email address
+
+<%= form_with scope: :user, url: users_path, local: true do |form| %>
+  <%= form.label :name %><br>
+  <%= form.text_field :name %>
+  <br>
+  <%= form.label :email %><br>
+  <%= form.text_field :email %>
+  <br>
+  <%= form.label :password %><br>
+  <%= form.password_field :password %>
+  <br>
+  <%= form.submit "Sign up", class: 'btn' %>
+<% end %>
