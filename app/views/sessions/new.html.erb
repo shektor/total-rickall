@@ -1,0 +1,13 @@
+<h1>Total Rickall</h1>
+
+<%= form_for(:session, url: sessions_path) do |form| %>
+
+  <%= form.label :email %><br>
+  <%= form.email_field :email %>
+  <br>
+  <%= form.label :password %><br>
+  <%= form.password_field :password %>
+  <br>
+  <%= form.submit "Log in", class: 'btn' %>
+
+<% end %>
