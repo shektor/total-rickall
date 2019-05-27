@@ -18,6 +18,6 @@ RSpec.feature 'Log in', type: :feature do
     fill_in('session[password]', with: password)
     click_button('Log in')
 
-    expect(page).to have_content(name)
+    expect(page).to have_content(user.name)
   end
 end

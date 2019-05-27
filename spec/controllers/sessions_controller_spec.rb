@@ -9,12 +9,12 @@ RSpec.describe SessionsController, type: :controller do
   end
 
   describe 'POST #create' do
-    it 'redirects if email exists and password match' do
+    it 'redirects to posts index after log in' do
       name = 'Rick'
       email = 'rick@c137.com'
       password = 'science'
 
-      user = User.create!(name: name, email: email, password: password)
+      User.create!(name: name, email: email, password: password)
 
       get :new
       post :create, params: {
