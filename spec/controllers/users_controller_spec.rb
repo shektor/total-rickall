@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe UsersController, type: :controller do
+describe UsersController, type: :controller do
   describe 'GET #new' do
     it 'returns a success response' do
       get :new
@@ -20,7 +20,11 @@ RSpec.describe UsersController, type: :controller do
       password = 'science'
 
       get :new
-      post :create, params: { user: { name: name, email: email, password: password } }
+      post :create, params: {
+        user: {
+          name: name, email: email, password: password
+        }
+      }
       user = User.find_by(email: email)
       expect(user.name).to eq name
     end
@@ -31,7 +35,11 @@ RSpec.describe UsersController, type: :controller do
       password = 'science'
 
       get :new
-      post :create, params: { user: { name: name, email: email, password: password } }
+      post :create, params: {
+        user: {
+          name: name, email: email, password: password
+        }
+      }
       expect(response).to redirect_to(new_session_url)
     end
   end
