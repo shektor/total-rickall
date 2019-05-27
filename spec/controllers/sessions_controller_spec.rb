@@ -23,5 +23,20 @@ RSpec.describe SessionsController, type: :controller do
 
       expect(response).to redirect_to(posts_url)
     end
+
+    it 'assigns the matching user_id for email to a session' do
+      name = 'Rick'
+      email = 'rick@c137.com'
+      password = 'science'
+
+      user = User.create!(name: name, email: email, password: password)
+
+      get :new
+      post :create, params: {
+        session: { email: email, password: password }
+      }
+
+      expect(session[:user_id]).to eq user.id
+    end
   end
 end
