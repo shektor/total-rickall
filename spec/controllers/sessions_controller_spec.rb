@@ -9,6 +9,34 @@ RSpec.describe SessionsController, type: :controller do
   end
 
   describe 'POST #create' do
-    pending 'test specs to be added'
+    it 'redirects to posts index after log in' do
+      name = 'Rick'
+      email = 'rick@c137.com'
+      password = 'science'
+
+      User.create!(name: name, email: email, password: password)
+
+      get :new
+      post :create, params: {
+        session: { email: email, password: password }
+      }
+
+      expect(response).to redirect_to(posts_url)
+    end
+
+    it 'assigns the matching user_id for email to a session' do
+      name = 'Rick'
+      email = 'rick@c137.com'
+      password = 'science'
+
+      user = User.create!(name: name, email: email, password: password)
+
+      get :new
+      post :create, params: {
+        session: { email: email, password: password }
+      }
+
+      expect(session[:user_id]).to eq user.id
+    end
   end
 end
