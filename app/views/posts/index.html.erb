@@ -1,2 +1,7 @@
-<%= @user.name %>
-New post
+<%= @user.name %><br>
+<%= link_to 'New post', new_post_path %>
+<br>
+<% if @post %>
+  <img src="<%= url_for(@post.picture) %>"><br>
+  <%= @post.description %><br>
+<% end %>
