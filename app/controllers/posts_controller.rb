@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   def index
     @user = User.find_by(id: session[:user_id])
-    @post = Post.last
+    @posts = Post.all
   end
 
   def new; end
