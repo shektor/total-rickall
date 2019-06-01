@@ -4,7 +4,9 @@
 <% if @posts %>
   <% @posts.each do |post| %>
     <% if post.picture.attached? %>
-      <img src="<%= url_for(post.picture) %>"><br>
+      <%= link_to(post_path(post)) do %>
+       <img src="<%= url_for(post.picture) %>" alt="<%= post.picture.filename %>">
+      <% end %><br>
     <% end %>
     <%= post.description %><br>
   <% end %>
