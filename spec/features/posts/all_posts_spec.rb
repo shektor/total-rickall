@@ -1,21 +1,14 @@
 require 'rails_helper'
+require 'feature_test_helper'
 
 RSpec.feature 'All posts', type: :feature do
+  let(:name) { 'Rick' }
+  let(:email) { 'rick@c137.com' }
+  let(:password) { 'science' }
+  
   scenario 'can see all posts created' do
-    name = 'Rick'
-    email = 'rick@c137.com'
-    password = 'science'
-
-    visit '/users/new'
-
-    fill_in('user[name]', with: name)
-    fill_in('user[email]', with: email)
-    fill_in('user[password]', with: password)
-    click_button('Sign up')
-
-    fill_in('session[email]', with: email)
-    fill_in('session[password]', with: password)
-    click_button('Log in')
+    sign_up
+    log_in
 
     picture_location_one = 'app/assets/images/test.jpg'
     description_one = 'A picture'

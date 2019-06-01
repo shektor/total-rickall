@@ -1,21 +1,13 @@
 require 'rails_helper'
 
 RSpec.feature 'View single post', type: :feature do
+  let(:name) { 'Rick' }
+  let(:email) { 'rick@c137.com' }
+  let(:password) { 'science' }
+
   scenario 'can view a post when clicking picture on index' do
-    name = 'Rick'
-    email = 'rick@c137.com'
-    password = 'science'
-
-    visit '/users/new'
-
-    fill_in('user[name]', with: name)
-    fill_in('user[email]', with: email)
-    fill_in('user[password]', with: password)
-    click_button('Sign up')
-
-    fill_in('session[email]', with: email)
-    fill_in('session[password]', with: password)
-    click_button('Log in')
+    sign_up
+    log_in
 
     picture_location = 'app/assets/images/test.jpg'
     description = 'A picture'

@@ -5,9 +5,7 @@ RSpec.describe PostsController, type: :controller do
   let(:email) { 'rick@c137.com' }
   let(:password) { 'science' }
   let(:description) { 'picture-post' }
-  let(:picture) {
-    fixture_file_upload('app/assets/images/test.jpg', 'image/jpg')
-  }
+  let(:picture) { fixture_file_upload('app/assets/images/test.jpg', 'image/jpg') }
 
   describe 'GET #index' do
     it 'returns a success response' do

@@ -3,17 +3,17 @@ Rails:
 
 AllCops:
   Exclude:
-    - 'bin/**/*'
-    - 'config/**/*'
-    - 'coverage/**/*'
-    - 'db/**/*'
-    - 'lib/**/*'
-    - 'log/**/*'
-    - 'public/**/*'
-    - 'storage/**/*'
-    - 'test/**/*'
-    - 'tmp/**/*'
-    - 'vendor/**/*'
+    - "bin/**/*"
+    - "config/**/*"
+    - "coverage/**/*"
+    - "db/**/*"
+    - "lib/**/*"
+    - "log/**/*"
+    - "public/**/*"
+    - "storage/**/*"
+    - "test/**/*"
+    - "tmp/**/*"
+    - "vendor/**/*"
 
 Style/FrozenStringLiteralComment:
   Enabled: false
@@ -31,7 +31,7 @@ Layout/IndentFirstArrayElement:
   EnforcedStyle: consistent
 
 Metrics/BlockLength:
-  ExcludedMethods: ['describe']
+  ExcludedMethods: ["describe"]
 
 Documentation:
-    Enabled: false
+  Enabled: false
