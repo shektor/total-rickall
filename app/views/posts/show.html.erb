@@ -1,0 +1,4 @@
+<% if @post.picture.attached? %>
+  <img src="<%= url_for(@post.picture) %>" alt="<%= @post.picture.filename %>">
+<% end %><br>
+<%= @post.description %>
