@@ -1,4 +1,12 @@
 <% if @post.picture.attached? %>
   <img src="<%= url_for(@post.picture) %>" alt="<%= @post.picture.filename %>">
 <% end %><br>
-<%= @post.description %>
+<%= @post.description %><br>
+<%= form_with(model: [ @post, @post.comments.build ], local: true) do |form| %>
+<%= form.label 'Comment' %>
+<%= form.text_field :message %>
+<%= form.submit 'Add' %>
+<% end %>
+<% @post.comments.each do |comment| %>
+<%= comment.message %><br>
+<% end %>

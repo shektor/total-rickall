@@ -5,7 +5,7 @@ RSpec.feature 'All posts', type: :feature do
   let(:name) { 'Rick' }
   let(:email) { 'rick@c137.com' }
   let(:password) { 'science' }
-  
+
   scenario 'can see all posts created' do
     sign_up
     log_in
