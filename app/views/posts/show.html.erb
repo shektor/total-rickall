@@ -7,3 +7,6 @@
 <%= form.text_field :message %>
 <%= form.submit 'Add' %>
 <% end %>
+<% @post.comments.each do |comment| %>
+<%= comment.message %><br>
+<% end %>
