@@ -1,8 +1,8 @@
 # Total Rickall
 
-![Travis (.org) branch](https://img.shields.io/travis/shektor/total-rickall/master.svg?style=flat-square)
+![Travis (.org) branch](https://img.shields.io/travis/shektor/total-rickall/master.svg?style=flat-square) ![Coveralls github branch](https://img.shields.io/coveralls/github/shektor/total-rickall/master.svg?style=flat-square)
 
-Post pictures, add comments and like them (a 'Rick and Morty' inspired Instagram clone).
+Post pictures, add comments and like them. A 'Rick and Morty' inspired Instagram clone with Ruby on Rails.
 
 ## Getting started
 
@@ -20,12 +20,10 @@ Post pictures, add comments and like them (a 'Rick and Morty' inspired Instagram
 
 ## Running tests
 
-Unit and feature tests including test coverage
+Unit and feature tests including test coverage.
 
 ```bash
 > rspec
-
-> rubocop
 ```
 
 Code linting
