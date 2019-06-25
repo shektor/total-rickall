@@ -1,6 +1,9 @@
 # Total Rickall
 
-![Travis (.org) branch](https://img.shields.io/travis/shektor/total-rickall/master.svg?style=flat-square) ![Coveralls github branch](https://img.shields.io/coveralls/github/shektor/total-rickall/master.svg?style=flat-square)
+<p>
+<a href="https://travis-ci.org/shektor/total-rickall"><img src="https://img.shields.io/travis/shektor/total-rickall/master.svg?style=flat-square"></a>
+<a href ="https://coveralls.io/github/shektor/total-rickall"><img src="https://img.shields.io/coveralls/github/shektor/total-rickall/master.svg?style=flat-square"></a>
+</p>
 
 Post pictures, add comments and like them. A 'Rick and Morty' inspired Instagram clone with Ruby on Rails.
 
