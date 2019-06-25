@@ -3,9 +3,8 @@ language: ruby
 rvm:
   - 2.6.0
 
-before_install:
-  - gem update --system
-  - gem install bundler
+services:
+  - postgresql
 
 script:
   - bundle install --jobs=3 --retry=3
